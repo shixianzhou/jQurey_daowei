@@ -23,16 +23,16 @@
     <ul class="head_nav">
       <li class="position"><a href="javascript:">
         <img src="./images/citypoint@2x.png" alt="">
-        <i>北京</i>
+        <i style="color: #121212">北京</i>
         <i>切换城市</i>
       </a></li>
-      <li><a href="javascript:">首页</a></li>
+      <li><a href="http://localhost:3000">首页</a></li>
       <li><a href="javascript:">到位APP</a></li>
-      <li><a href="javascript:">服务商</a></li>
+      <li  class="active"><a href="http://localhost:3000/pages/Servive/Service.html">服务商</a></li>
       <li><a href="javascript:">商家入驻</a></li>
       <li><a href="javascript:">风物APP</a></li>
       <li><a href="javascript:">关于我们</a></li>
-      <li><a href="javascript:"  class="shanghu">商家登陆</a></li>
+      <li><a href="javascript:"  class="shanghu" style="color: #fff">商家登陆</a></li>
     </ul>
   </div>
 </header>
@@ -41,94 +41,7 @@
   <div class="centerleft">
     <div class="tabdiv">
       <ul class="ulactivety">
-        <li>
-          <img src="./images/9d7df969-9c96-41d1-bb9b-0b818b49fd8f_thumb.jpg" alt="">
-          <p style="margin-top: 15px">
-            <img src="./images/home1.png" alt="">
-            <b>云家政</b>
-          </p>
-          <p class="pp">
-            已接单4566单
-            <i>好评86%</i>
-          </p>
-        </li>
-        <li>
-          <img src="./images/9d7df969-9c96-41d1-bb9b-0b818b49fd8f_thumb.jpg" alt="">
-          <p style="margin-top: 15px">
-            <img src="./images/home1.png" alt="">
-            <b>云家政</b>
-          </p>
-          <p class="pp">
-            已接单4566单
-            <i>好评86%</i>
-          </p>
-        </li>
-        <li>
-          <img src="./images/9d7df969-9c96-41d1-bb9b-0b818b49fd8f_thumb.jpg" alt="">
-          <p style="margin-top: 15px">
-            <img src="./images/home1.png" alt="">
-            <b>云家政</b>
-          </p>
-          <p class="pp">
-            已接单4566单
-            <i>好评86%</i>
-          </p>
-        </li>
-        <li>
-          <img src="./images/9d7df969-9c96-41d1-bb9b-0b818b49fd8f_thumb.jpg" alt="">
-          <p style="margin-top: 15px">
-            <img src="./images/home1.png" alt="">
-            <b>云家政</b>
-          </p>
-          <p class="pp">
-            已接单4566单
-            <i>好评86%</i>
-          </p>
-        </li>
-        <li>
-          <img src="./images/9d7df969-9c96-41d1-bb9b-0b818b49fd8f_thumb.jpg" alt="">
-          <p style="margin-top: 15px">
-            <img src="./images/home1.png" alt="">
-            <b>云家政</b>
-          </p>
-          <p class="pp">
-            已接单4566单
-            <i>好评86%</i>
-          </p>
-        </li>
-        <li>
-          <img src="./images/9d7df969-9c96-41d1-bb9b-0b818b49fd8f_thumb.jpg" alt="">
-          <p style="margin-top: 15px">
-            <img src="./images/home1.png" alt="">
-            <b>云家政</b>
-          </p>
-          <p class="pp">
-            已接单4566单
-            <i>好评86%</i>
-          </p>
-        </li>
-        <li>
-          <img src="./images/9d7df969-9c96-41d1-bb9b-0b818b49fd8f_thumb.jpg" alt="">
-          <p style="margin-top: 15px">
-            <img src="./images/home1.png" alt="">
-            <b>云家政</b>
-          </p>
-          <p class="pp">
-            已接单4566单
-            <i>好评86%</i>
-          </p>
-        </li>
-        <li>
-          <img src="./images/9d7df969-9c96-41d1-bb9b-0b818b49fd8f_thumb.jpg" alt="">
-          <p style="margin-top: 15px">
-            <img src="./images/home1.png" alt="">
-            <b>云家政</b>
-          </p>
-          <p class="pp">
-            已接单4566单
-            <i>好评86%</i>
-          </p>
-        </li>
+
       </ul>
     </div>
     <div class="getServiceList">
@@ -208,5 +121,47 @@
 <div class="banquan">
   <p>©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
 </div>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../javascripts/template-web.js"></script>
+
+<script type="text/html" id="service">
+  {{each data val key}}
+  <li>
+    <img src={{val.imgUrl[0]}} alt="">
+    <p style="margin-top: 15px">
+      <img src="./images/home1.png" alt="">
+      <b>{{val.title}}</b>
+    </p>
+    <p class="pp">
+      已接单{{val.orderCount}}单
+      <i>好评{{val.positiveRate[0]}}%</i>
+    </p>
+  </li>
+  {{/each}}
+</script>
+
+
+<script type="text/javascript">
+    $.get("http://localhost:3000/service",function (data) {
+      console.log(data);
+      $(".ulactivety").html(template("service",{data}))
+    })
+</script>
+
+<script type="text/javascript">
+  $(function () {
+    $(window).scroll(function () {
+      const top =$('html').scrollTop()
+      const headTop = $('.head').height()
+      if (top >= headTop) {
+        $('#none').css({"height":"65px","padding":"2.5px","border":"1px solid #e5e5e5"})
+        console.log(top,headTop);
+      }else {
+        $('#none').css({"height":"0","padding":"0","border":"0"})
+      }
+    });
+  })
+</script>
 </body>
 </html>

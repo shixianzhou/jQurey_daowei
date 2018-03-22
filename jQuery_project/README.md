@@ -40,3 +40,24 @@ Swiper官网：http://www.swiper.com.cn/
     hover阴影
 ```
 简单静态，暂无问题
+## 第三天
+1.实现服务详情 静态页面
+
+2.实现一些简单的交互效果
+
+3.实现首页/服务商/服务评价(部分) 动态渲染页面
+
+
+``` bash
+问题：
+    node后台不熟练
+    模板使用已忘
+    
+解决办法
+    学委
+    百度
+    
+```
+art-template模板： http://aui.github.io/art-template/  
+
+待解决：分页查询

@@ -5,6 +5,7 @@
   <title>ISP</title>
   <link rel="stylesheet" href="../../stylesheets/reset.css">
   <link rel="stylesheet" href="../../stylesheets/ISP.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
   <style lang="stylus" rel="stylesheet/stylus">
     * {
       margin: 0;
@@ -23,16 +24,16 @@
     <ul class="head_nav">
       <li class="position"><a href="javascript:">
         <img src="./images/citypoint@2x.png" alt="">
-        <i>北京</i>
+        <i style="color: #121212">北京</i>
         <i>切换城市</i>
       </a></li>
-      <li><a href="javascript:">首页</a></li>
+      <li class="active"><a href="http://localhost:3000">首页</a></li>
       <li><a href="javascript:">到位APP</a></li>
-      <li><a href="javascript:">服务商</a></li>
+      <li><a href="http://localhost:3000/pages/Servive/Service.html">服务商</a></li>
       <li><a href="javascript:">商家入驻</a></li>
       <li><a href="javascript:">风物APP</a></li>
       <li><a href="javascript:">关于我们</a></li>
-      <li><a href="javascript:"  class="shanghu">商家登陆</a></li>
+      <li><a href="javascript:"  class="shanghu" style="color: #fff">商家登陆</a></li>
     </ul>
   </div>
 </header>
@@ -50,22 +51,8 @@
         </span>
       </div>
       <div class="htit_right">
-        <ul>
-          <li>
-            <i class="fi">45658</i>
-            成功接单
-            <i>|</i>
-          </li>
-          <li>
-            <i class="fi">88%</i>
-            接单率
-            <i>|</i>
-          </li>
-          <li>
-            <i class="fi">86%</i>
-            好评率
-            <i style="visibility: hidden">|</i>
-          </li>
+        <ul class="titleright">
+
         </ul>
       </div>
     </div>
@@ -85,28 +72,7 @@
       </span>
     </h3>
     <div class="fuwu">
-      <a href="javascript:">
-        <div class="ctop ">
-          <img src="./images/47bb440b-5292-4100-8b16-88779f759bf5_thumb.jpg" alt="">
-          <span class="xiangqing">
-            <i>家庭保洁</i>
-            <i style="color:#929292">家庭保洁服务，2小时起订，服务时间未使用完不做退款处理。阿...</i>
-            <i class="price">
-              <b>
-                35<em>元/小时</em>
-              </b>
-              <b class="oldpic">
-                原价
-                <em><del>45</del></em>
-              </b>
-            </i>
-          </span>
-          <span class="xiaoliang">
-            已售
-            <i>66666</i>
-          </span>
-        </div>
-      </a>
+
     </div>
     <div class="space" style="height: 70px">
 
@@ -117,11 +83,7 @@
       </span>
     </h3>
     <div class="company">
-      <div>上海家谐网络科技有限公司 <img src="./images/renzheng.jpg" alt=""> </div>
-      <p class="profile">
-        云家政是家政服务在线预订平台。我们的目标是让每个家庭都能获得诚信、便捷、有保障的家政服务。云家政拥有国内最大的实名认证家庭服务员数据库，目前平台上有超过100000名专业服务人员；数百个家政服务商，遍布全国主要城市各个社区。
-        云家政倡导简单、轻松的生活方式。通过把分散的家政服务能力汇集和分配，让中国家庭获得诚信、便捷、有保障的家政服务，解决日常生活中的麻烦事，把更多时间留给自己和家人，提高生活品质。
-      </p>
+
     </div>
     <div class="space" style="height: 10px">
 
@@ -134,17 +96,17 @@
     </h3>
     <div class="commentDiv">
       <div class="conmentss">
-        <img src="" alt="">
+        <img class="touxiang" src="./images/0.jpg" alt="">
         <ul>
           <li>交行马琰1108169</li>
           <li>
             <span class="star">
               <span class="noColor">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
               </span>
             </span>
             <em>2018-03-21</em>
@@ -152,16 +114,282 @@
           <li class="commentdetail">态度热情，服务专业，准时到达</li>
           <li class="commentimg"></li>
           <li class="commentposition">
-            <img src="" alt="">
+            <img src="./images/position.jpg" alt="">
+            北京  昌平区
+          </li>
+        </ul>
+      </div>
+      <div class="conmentss">
+        <img class="touxiang" src="./images/0.jpg" alt="">
+        <ul>
+          <li>交行马琰1108169</li>
+          <li>
+            <span class="star">
+              <span class="noColor">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+              </span>
+            </span>
+            <em>2018-03-21</em>
+          </li>
+          <li class="commentdetail">态度热情，服务专业，准时到达</li>
+          <li class="commentimg"></li>
+          <li class="commentposition">
+            <img src="./images/position.jpg" alt="">
+            北京  昌平区
+          </li>
+        </ul>
+      </div>
+      <div class="conmentss">
+        <img class="touxiang" src="./images/0.jpg" alt="">
+        <ul>
+          <li>交行马琰1108169</li>
+          <li>
+            <span class="star">
+              <span class="noColor">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+              </span>
+            </span>
+            <em>2018-03-21</em>
+          </li>
+          <li class="commentdetail">态度热情，服务专业，准时到达</li>
+          <li class="commentimg"></li>
+          <li class="commentposition">
+            <img src="./images/position.jpg" alt="">
             北京  昌平区
           </li>
         </ul>
       </div>
     </div>
+    <div class="fenye">
+      <a class="Back disable" href="javascript:">&lt;上一页</a>
+      <div class="showPage">
+        <a href="javascript:" class="num acv">1</a>
+        <a href="javascript:" class="num">2</a>
+        <a href="javascript:" class="num">3</a>
+        <a href="javascript:" class="num">4</a>
+        <a href="javascript:" class="num">5</a>
+        <a href="javascript:" class="num">6</a>
+        <a href="javascript:" class="num">7</a>
+        <a href="javascript:" class="num">8</a>
+        <a href="javascript:" class="num">9</a>
+        <a href="javascript:" class="num">10</a>
+        ...
+      </div>
+      <a class="next" href="javascript:">下一页&gt;</a>
+    </div>
   </div>
   <div class="center_right">
-
+    <div class="right">
+      <div class="erweima erweima2">
+        <img src="./images/下载.png" alt="">
+      </div>
+      <div class="erweima erweima3">
+        <img src="./images/daowayApp.png" alt="">
+      </div>
+    </div>
   </div>
 </div>
+<div class="baozhang">
+  <h2>到位<i>服务</i>保障</h2>
+  <p>到位平台担保交易安全，交易未成功100%退款</p>
+</div>
+<div class="servi">
+  <ul>
+    <li>
+      <img src="./images/anquan.jpg" alt="">
+      优选服务
+    </li>
+    <li>
+      <img src="./images/anquan.jpg" alt="">
+      优选服务
+    </li>
+    <li>
+      <img src="./images/anquan.jpg" alt="">
+      优选服务
+    </li>
+  </ul>
+</div>
+<div class="footer">
+  <dl>
+    <dt>热门城市</dt>
+    <dd>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+      <a href="javascript:">北京</a>
+    </dd>
+  </dl>
+</div>
+<div class="banquan">
+  <p>©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../javascripts/template-web.js"></script>
+
+<script type="text/html" id="comment">
+  {{each data val key}}
+  <li>
+    <img src={{val.imgUrl[0]}} alt="">
+    <p style="margin-top: 15px">
+      <img src="./images/home1.png" alt="">
+      <b>{{val.title}}</b>
+    </p>
+    <p class="pp">
+      已接单{{val.orderCount}}单
+      <i>好评{{val.positiveRate[0]}}%</i>
+    </p>
+  </li>
+  {{/each}}
+</script>
+
+<script type="text/html" id="title">
+  {{each data val key}}
+  <li>
+    <i class="fi">{{val.orderCount}}</i>
+    成功接单
+    <i>|</i>
+  </li>
+  <li>
+    <i class="fi">{{val.accept}}</i>
+    接单率
+    <i>|</i>
+  </li>
+  <li>
+    <i class="fi">{{val.praise}}</i>
+    好评率
+    <i style="visibility: hidden">|</i>
+  </li>
+  {{/each}}
+</script>
+
+<script type="text/html" id="content">
+  {{each data val key}}
+  <a href="javascript:">
+    <div class="ctop ">
+      <img src="./images/47bb440b-5292-4100-8b16-88779f759bf5_thumb.jpg" alt="">
+      <span class="xiangqing">
+            <i>{{val.name}}</i>
+            <i style="color:#929292">{{val.desc}}.</i>
+            <i class="price">
+              <b>
+                {{val.price}}<em>元/小时</em>
+              </b>
+              <b class="oldpic">
+                原价
+                <em><del>{{val.oldPrice}}</del></em>
+              </b>
+            </i>
+          </span>
+      <span class="xiaoliang">
+            已售
+            <i>{{val.soldCount}}</i>
+          </span>
+    </div>
+  </a>
+  {{/each}}
+</script>
+
+<script type="text/html" id="jianjie">
+  {{each data val key}}
+  <div>{{val.company}} <img src="./images/renzheng.jpg" alt=""> </div>
+  <p class="profile">
+    {{val.profile}}
+  </p>
+  {{/each}}
+</script>
+
+<script type="text/javascript">
+  $.get("http://localhost:3000/item",function (data) {
+    console.log(data);
+    $(".titleright").html(template("title",{data}))
+    $(".fuwu").html(template("content",{data}))
+    $(".company").html(template("jianjie",{data}))
+  })
+</script>
+
+<script type="text/javascript">
+    $(function () {
+      //所有
+     const pages = $('.showPage a');
+     var page=0
+     const cindex = 0
+      //上一页
+      $('.Back').click(function () {
+        page-=1;
+        console.log(page);
+        if(page<=0){
+          page=0
+          $('.Back').addClass("disable")
+        }
+        $(pages[page]).addClass("acv")
+        $(pages[page]).siblings().removeClass("acv")
+        $.get("http://localhost:3000/comment",function (data) {
+          console.log(data);
+        },page)
+      })
+      $('.next').click(function () {
+        $('.Back').removeClass("disable")
+        page+=1;
+        console.log(page);
+        if(page>9){
+          page=9
+
+        }
+        $(pages[page]).addClass("acv")
+        $(pages[page]).siblings().removeClass("acv")
+        $.get("http://localhost:3000/comment",function (data) {
+          console.log(data);
+        },page)
+      })
+      //dnsn
+      console.log(pages);
+      pages.click(function () {
+          page=$(this).index()
+          console.log(page);
+          $(this).addClass("acv")
+          $(this).siblings().removeClass("acv")
+        $.get("http://localhost:3000/comment",function (data) {
+          console.log(data);
+        },page)
+        })
+    })
+</script>
 </body>
 </html>
