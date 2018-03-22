@@ -27,9 +27,9 @@
         <i style="color: #121212">北京</i>
         <i>切换城市</i>
       </a></li>
-      <li class="active"><a href="http://localhost:3000">首页</a></li>
+      <li><a href="http://localhost:3000">首页</a></li>
       <li><a href="javascript:">到位APP</a></li>
-      <li><a href="http://localhost:3000/pages/Servive/Service.html">服务商</a></li>
+      <li class="active"><a href="http://localhost:3000/pages/Servive/Service.html">服务商</a></li>
       <li><a href="javascript:">商家入驻</a></li>
       <li><a href="javascript:">风物APP</a></li>
       <li><a href="javascript:">关于我们</a></li>
@@ -95,78 +95,7 @@
       </span>
     </h3>
     <div class="commentDiv">
-      <div class="conmentss">
-        <img class="touxiang" src="./images/0.jpg" alt="">
-        <ul>
-          <li>交行马琰1108169</li>
-          <li>
-            <span class="star">
-              <span class="noColor">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-              </span>
-            </span>
-            <em>2018-03-21</em>
-          </li>
-          <li class="commentdetail">态度热情，服务专业，准时到达</li>
-          <li class="commentimg"></li>
-          <li class="commentposition">
-            <img src="./images/position.jpg" alt="">
-            北京  昌平区
-          </li>
-        </ul>
-      </div>
-      <div class="conmentss">
-        <img class="touxiang" src="./images/0.jpg" alt="">
-        <ul>
-          <li>交行马琰1108169</li>
-          <li>
-            <span class="star">
-              <span class="noColor">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-              </span>
-            </span>
-            <em>2018-03-21</em>
-          </li>
-          <li class="commentdetail">态度热情，服务专业，准时到达</li>
-          <li class="commentimg"></li>
-          <li class="commentposition">
-            <img src="./images/position.jpg" alt="">
-            北京  昌平区
-          </li>
-        </ul>
-      </div>
-      <div class="conmentss">
-        <img class="touxiang" src="./images/0.jpg" alt="">
-        <ul>
-          <li>交行马琰1108169</li>
-          <li>
-            <span class="star">
-              <span class="noColor">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-                <img src="./images/red_star.png" alt="">
-              </span>
-            </span>
-            <em>2018-03-21</em>
-          </li>
-          <li class="commentdetail">态度热情，服务专业，准时到达</li>
-          <li class="commentimg"></li>
-          <li class="commentposition">
-            <img src="./images/position.jpg" alt="">
-            北京  昌平区
-          </li>
-        </ul>
-      </div>
+
     </div>
     <div class="fenye">
       <a class="Back disable" href="javascript:">&lt;上一页</a>
@@ -262,20 +191,34 @@
 </div>
 <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
 <script type="text/javascript" src="../../javascripts/template-web.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.21.0/moment.min.js"></script>
 
 <script type="text/html" id="comment">
   {{each data val key}}
-  <li>
-    <img src={{val.imgUrl[0]}} alt="">
-    <p style="margin-top: 15px">
-      <img src="./images/home1.png" alt="">
-      <b>{{val.title}}</b>
-    </p>
-    <p class="pp">
-      已接单{{val.orderCount}}单
-      <i>好评{{val.positiveRate[0]}}%</i>
-    </p>
-  </li>
+  <div class="conmentss">
+    <img class="touxiang" src={{val.iconUrl}} alt="">
+    <ul>
+      <li>{{val.nick}}</li>
+      <li>
+            <span class="star">
+              <span class="noColor">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+                <img src="./images/red_star.png" alt="">
+              </span>
+            </span>
+        <em>{{val.createtime | dateFormat 'YYYY-MM-DD'}}</em>
+      </li>
+      <li class="commentdetail">{{val.comment}}</li>
+      <li class="commentimg"></li>
+      <li class="commentposition">
+        <img src="./images/position.jpg" alt="">
+        {{val.city}}  {{val.area}}
+      </li>
+    </ul>
+  </div>
   {{/each}}
 </script>
 
@@ -301,7 +244,7 @@
 
 <script type="text/html" id="content">
   {{each data val key}}
-  <a href="javascript:">
+  <a href="http://localhost:3000/pages/Info/Info.html">
     <div class="ctop ">
       <img src="./images/47bb440b-5292-4100-8b16-88779f759bf5_thumb.jpg" alt="">
       <span class="xiangqing">
@@ -342,10 +285,15 @@
     $(".fuwu").html(template("content",{data}))
     $(".company").html(template("jianjie",{data}))
   })
+  $.get("http://localhost:3000/comment",function (data) {
+    console.log(data);
+    $(".commentDiv").html(template("comment",{data}))
+  })
 </script>
 
 <script type="text/javascript">
     $(function () {
+      let paging;
       //所有
      const pages = $('.showPage a');
      var page=0
@@ -360,9 +308,10 @@
         }
         $(pages[page]).addClass("acv")
         $(pages[page]).siblings().removeClass("acv")
-        $.get("http://localhost:3000/comment",function (data) {
+        $.get("http://localhost:3000/comment?page="+page,function (data) {
           console.log(data);
-        },page)
+          $(".commentDiv").html(template("comment",{data}))
+        })
       })
       $('.next').click(function () {
         $('.Back').removeClass("disable")
@@ -370,13 +319,13 @@
         console.log(page);
         if(page>9){
           page=9
-
         }
         $(pages[page]).addClass("acv")
         $(pages[page]).siblings().removeClass("acv")
-        $.get("http://localhost:3000/comment",function (data) {
+        $.get("http://localhost:3000/comment?page="+page,function (data) {
           console.log(data);
-        },page)
+          $(".commentDiv").html(template("comment",{data}))
+        })
       })
       //dnsn
       console.log(pages);
@@ -385,10 +334,14 @@
           console.log(page);
           $(this).addClass("acv")
           $(this).siblings().removeClass("acv")
-        $.get("http://localhost:3000/comment",function (data) {
+          $.get("http://localhost:3000/comment?page="+page,function (data) {
           console.log(data);
-        },page)
+          $(".commentDiv").html(template("comment",{data}))
         })
+        })
+      template.defaults.imports.dateFormat = function(date, format){
+        return moment(date).format(format);
+      };
     })
 </script>
 </body>

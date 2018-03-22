@@ -28,7 +28,7 @@
       </a></li>
       <li><a href="http://localhost:3000">首页</a></li>
       <li><a href="javascript:">到位APP</a></li>
-      <li  class="active"><a href="http://localhost:3000/pages/Servive/Service.html">服务商</a></li>
+      <li class="active"><a href="http://localhost:3000/pages/Servive/Service.html">服务商</a></li>
       <li><a href="javascript:">商家入驻</a></li>
       <li><a href="javascript:">风物APP</a></li>
       <li><a href="javascript:">关于我们</a></li>
@@ -128,6 +128,7 @@
 <script type="text/html" id="service">
   {{each data val key}}
   <li>
+    <a href="http://localhost:3000/pages/ISP/ISP.html">
     <img src={{val.imgUrl[0]}} alt="">
     <p style="margin-top: 15px">
       <img src="./images/home1.png" alt="">
@@ -137,6 +138,7 @@
       已接单{{val.orderCount}}单
       <i>好评{{val.positiveRate[0]}}%</i>
     </p>
+    </a>
   </li>
   {{/each}}
 </script>

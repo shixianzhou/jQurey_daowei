@@ -40,7 +40,7 @@ Swiper官网：http://www.swiper.com.cn/
     hover阴影
 ```
 简单静态，暂无问题
-## 第三天
+## 第三天(基本完成)
 1.实现服务详情 静态页面
 
 2.实现一些简单的交互效果
@@ -60,4 +60,6 @@ Swiper官网：http://www.swiper.com.cn/
 ```
 art-template模板： http://aui.github.io/art-template/  
 
-待解决：分页查询
+待解决：分页查询(已解决)
+
+**_`项目基本完成`_**

@@ -27,8 +27,10 @@ router.get('/shop',function (req,res) {
     res.send(data)
   });
 });
-router.get('/comment',function (req,res,page) {
-  Comment.find({}).skip(page*10).limit(10).exec(function (err,data) {
+router.get('/comment',function (req,res,next) {
+  const {page} = req.query
+  console.log(page);
+  Comment.find({}).skip(page*10).limit(10).sort("-createtime").exec(function (err,data) {
     res.send(data)
   });
 });
